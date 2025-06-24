@@ -28,12 +28,11 @@ const Header = () => {
     }
     
     return (
-        <header>
+        <header className='header'>
             <Flex justifyContent='space-between' flexGrow={0} alignItems='center' h='75px' px={{ base: '10px', md: '20px', lg: '30px' }} borderBottom='3px solid #2E3083'>
                 <Flex alignItems='center' justifyContent='space-between' w='100%' display={{ base: 'flex', xlg: 'none' }}>
                     <Link href={'/'} display={{ base: 'none', sm: 'block' }} aria-label={`Logo`} > <Logo /></Link>
                     <Link href={'/'} display={{ base: 'block', sm: 'none' }} aria-label={`LogoMini`}> <LogoMini /></Link>
-
                     <BurgerMenu
                     />
                 </Flex>
