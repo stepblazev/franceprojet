@@ -3,6 +3,9 @@ import { useRouter } from 'next/router';
 import SectionLayuot from '../UI/Layouts/SectionLayuot';
 import { useTranslation } from 'next-i18next';
 
+import { FaPhone, FaLocationDot } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+
 import { Controller, useForm } from 'react-hook-form';
 import Local from '../../assets/contact_address.svg';
 import Mail from '../../assets/contact_mail.svg';
@@ -61,7 +64,11 @@ const Contact = () => {
                         : { base: '50px', md: '100px', lg: '135px' },
             }}
         >
-            <Flex w={'100%'} h={'auto'} justifyContent={{ base: 'center', xlg: 'unset' }}>
+            <Flex 
+                w={'100%'} h={'auto'} 
+                justifyContent={{ base: 'center', xlg: 'unset' }}
+                flexDirection={{ base: 'column', xxxsm: 'row' }}
+            >
                 <Flex
                     w={{ base: '100%', xxxsm: 'fit-content' }}
                     h={'auto'}
@@ -84,24 +91,26 @@ const Contact = () => {
                         {t('contact')}
                     </Text>
                     <Flex
+                        maxWidth={'100%'}
+                        w={{ base: '100%', sm: '80%', xxxsm: '100%', lg: '350px', xlg: '346px' }}
                         flexDir={'column'}
-                        gap={{ base: '12px', lg: '20px' }}
-                        display={{ base: 'none', xmd: 'flex' }}
+                        gap={{ base: '12px', xlg: '20px' }}
+                        display={{ base: 'flex' }}
+                        alignSelf={'center'}
                     >
                         <Flex
                             flexWrap={'nowrap'}
-                            gap={{ base: '20px', lg: '40px' }}
-                            height={'22px'}
+                            gap={{ base: '12px', xlg: '24px' }}
                             alignItems={'start'}
                         >
-                            <Box pl={'5px'} w={'25px'}>
-                                <Phone />
+                            <Box mt={'4px'} color={{ base: '#2E3083', xxxsm: '#FFFFFF' }} flexShrink={0}>
+                                <FaPhone className={'contact-icon'} />
                             </Box>{' '}
                             <Text
                                 as={'p'}
-                                color={'#ffffff'}
+                                color={{ base: '#2E3083', xxxsm: '#ffffff'}}
                                 whiteSpace={'nowrap'}
-                                fontSize={{ base: '12px', lg: '18px' }}
+                                fontSize={{ base: '12px', mini: '18px' }}
                                 fontWeight={600}
                                 lineHeight={'normal'}
                                 textAlign={'left'}
@@ -111,49 +120,47 @@ const Contact = () => {
                         </Flex>
                         <Flex
                             flexWrap={'nowrap'}
-                            gap={{ base: '20px', lg: '40px' }}
-                            height={'22px'}
+                            gap={{ base: '12px', xlg: '24px' }}
                             alignItems={'start'}
                         >
-                            <Box w={'25px'}>
-                                <Mail />{' '}
+                            <Box mt={'4px'} color={{ base: '#2E3083', xxxsm: '#FFFFFF' }} flexShrink={0}>
+                                <IoMdMail className={'contact-icon'} />{' '}
                             </Box>
                             <Text
                                 as={'p'}
-                                color={'#ffffff'}
+                                color={{ base: '#2E3083', xxxsm: '#ffffff'}}
                                 whiteSpace={'nowrap'}
-                                fontSize={{ base: '12px', lg: '18px' }}
+                                fontSize={{ base: '12px', mini: '18px' }}
                                 fontWeight={600}
                                 lineHeight={'normal'}
                                 textAlign={'left'}
                             >
-                                05contact@franceprojet.com1
+                                contact@franceprojet.com
                             </Text>{' '}
                         </Flex>
                         <Flex
                             flexWrap={'nowrap'}
-                            gap={{ base: '20px', lg: '40px' }}
-                            height={'22px'}
+                            gap={{ base: '12px', xlg: '24px' }}
                             alignItems={'start'}
                         >
-                            <Box pl={'5px'} w={'25px'}>
-                                <Local />
+                            <Box mt={'4px'} color={{ base: '#2E3083', xxxsm: '#FFFFFF' }} flexShrink={0}>
+                                <FaLocationDot className={'contact-icon'} />
                             </Box>{' '}
                             <Text
                                 as={'p'}
-                                whiteSpace={'nowrap'}
-                                color={'#ffffff'}
-                                fontSize={{ base: '12px', lg: '18px' }}
+                                color={{ base: '#2E3083', xxxsm: '#ffffff'}}
+                                fontSize={{ base: '12px', mini: '18px' }}
                                 fontWeight={600}
                                 lineHeight={'normal'}
                                 textAlign={'left'}
                             >
-                                rue de paris 75000 Paris
+                                rue de paris 75000 Paris, rue de paris 75000 Paris, rue de paris 75000 Paris
                             </Text>{' '}
                         </Flex>
                     </Flex>
                     <Flex
                         as="form"
+                        mt={{ base: '24px', xlg: '0px' }}
                         flexDir={'column'}
                         alignItems={'end'}
                         gap={'16px'}
@@ -222,7 +229,7 @@ const Contact = () => {
                         </button>
                     </Flex>
                 </Flex>
-                <Box className="map-container" display={{ base: 'none', xxxsm: 'block' }}>
+                <Box className="map-container" h={{ base: '500px', xxxsm: 'auto' }}>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6675158464263!2d2.2892737!3d48.8645502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fe4d2e03d41%3A0xb664c571bdb39f8f!2zMTEgUnVlIGRlIE1hZ2RlYm91cmcsIDc1MTE2IFBhcmlzLCDQpNGA0LDQvdGG0LjRjw!5e0!3m2!1sru!2sua!4v1712756774380!5m2!1sru!2sua"
                         title="Google Map"

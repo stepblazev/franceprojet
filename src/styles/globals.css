@@ -169,3 +169,14 @@ a {
     padding: 8px;
   }
   
+  
+.contact-icon {
+    width: 20px;
+    height: 20px;
+}
+@media screen and (max-width: 529px) {
+    .contact-icon {
+        width: 12px;
+        height: 12px;
+    }
+}
