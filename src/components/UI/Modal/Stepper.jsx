@@ -80,19 +80,19 @@ function InnerCheckboxGroup() {
     const [selectedValues, setSelectedValues] = useState([]);
 
     const handlesurfaceArea1 = (value) => {
-        console.log(value.target.value)
+        // console.log(value.target.value)
         localStorage.setItem('surfaceArea1',value.target.value)
     };
     const handlesurfaceArea2 = (value) => {
-        console.log(value.target.value)
+        // console.log(value.target.value)
         localStorage.setItem('surfaceArea2',value.target.value)
     };
     const handlesurfaceArea3 = (value) => {
-        console.log(value.target.value)
+        // console.log(value.target.value)
         localStorage.setItem('surfaceArea3',value.target.value)
     };
     const handlesurfaceArea4= (value) => {
-        console.log(value.target.value)
+        // console.log(value.target.value)
         localStorage.setItem('surfaceArea4',value.target.value)
     };
 
@@ -193,7 +193,7 @@ const StepperComp = ({ onClose, isOpen }) => {
         count: steps.length,
     })
     const [selectedOutIndoor, setSelectedOutIndoor] = useState('indoor'); // Стейт для отслеживания выбора
-    console.log(selectedOutIndoor);
+    // console.log(selectedOutIndoor);
     const handleRadioChange = (value) => {
         setSelectedOutIndoor(value);
     };
@@ -215,7 +215,7 @@ const StepperComp = ({ onClose, isOpen }) => {
     const btnRef = useRef(null)
 
 
-    console.log('activeStep', activeStep)
+    // console.log('activeStep', activeStep)
 
     const {
         control,
@@ -250,10 +250,10 @@ const StepperComp = ({ onClose, isOpen }) => {
         modalRef.current?.scrollIntoView({ behavior: 'smooth' });
 
         if (isLastStep) return
-        console.log('11111', activeStep)
+        // console.log('11111', activeStep)
         const isValid = await trigger(); // Запускаем валидацию всех полей формы
         if (isValid) {
-            console.log('22222', activeStep)
+            // console.log('22222', activeStep)
 
             setActiveStep(activeStep + 1); // Переходим на следующий шаг, если все поля валидны
         }
@@ -276,7 +276,7 @@ const StepperComp = ({ onClose, isOpen }) => {
 
 		
 
-        console.log(JSON.stringify(data));
+        // console.log(JSON.stringify(data));
 		//alert(data.surfaceAreaRenovated)
         // console.log('files', JSON.stringify(extractedData))
 

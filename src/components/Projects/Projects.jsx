@@ -19,7 +19,7 @@ const Projects = ({untitled = false}) => {
     const { t } = useTranslation('common');
  // Внутри функционального компонента
     const router = useRouter();
-    console.log("🚀 ~ Projects ~ router:", router)
+    // console.log("🚀 ~ Projects ~ router:", router)
     const [projects, setProjects] = useState([]);
     // console.log("🚀 ~ Projects ~ projects:", projects)
     

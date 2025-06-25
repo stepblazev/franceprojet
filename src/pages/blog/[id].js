@@ -16,7 +16,7 @@ import Loader from '@/components/UI/Loader';
 // import { useTranslation } from 'next-i18next';
 const index = ({ blogs }) => {
     // const { t } = useTranslation('common');
-    console.log('🚀 ~ index ~ blogs:', blogs);
+    // console.log('🚀 ~ index ~ blogs:', blogs);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const [swiperRef, setSwiperRef] = useState(null);
 

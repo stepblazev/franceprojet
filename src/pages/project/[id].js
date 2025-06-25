@@ -10,11 +10,11 @@ import { useTranslation } from 'next-i18next';
 import Head from 'next/head';
 
 const ProjectItem = ({ project }) => {
-    console.log("🚀 ~ ProjectItem ~ project:", project)
+    // console.log("🚀 ~ ProjectItem ~ project:", project)
     const { t } = useTranslation('common');
  // Внутри функционального компонента
     const { query } = useRouter();
-    console.log('🚀 ~ ProjectItem ~ router:', query.id);
+    // console.log('🚀 ~ ProjectItem ~ router:', query.id);
 
     
     return (

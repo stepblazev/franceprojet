@@ -52,7 +52,7 @@ export const getProjects = async lang => {
 };
 
 export const getOneProject = async (slug,lang) => {
-        console.log(slug)
+        // console.log(slug)
 
     try {
         const { data } = await axios.get(
