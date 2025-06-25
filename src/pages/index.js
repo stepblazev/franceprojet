@@ -28,12 +28,11 @@ function Home({props}) {
             <Renovation />
             <Projects />
             <Partners />
-            <Opinions  display={{ base: 'none', xmini: 'flex' }}/>
+            <Opinions/>
             <AboutFranceProjet />
             <OurApplication />
             <Trends />
             <WhyPutTrust />
-            <Opinions  display={{ base: 'flex', xmini: 'none' }}/>
 
             <Join />
             <Blogs />

@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.swiper-slide img {
+.swiper-slide:not(.swiper-slide-custom) img {
   display: block;
   width: 100%;
   height: auto;
