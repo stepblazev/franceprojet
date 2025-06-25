@@ -115,7 +115,7 @@ const Contact = () => {
                                 lineHeight={'normal'}
                                 textAlign={'left'}
                             >
-                                01 02 03 04
+                                +33769397501
                             </Text>{' '}
                         </Flex>
                         <Flex
@@ -135,7 +135,7 @@ const Contact = () => {
                                 lineHeight={'normal'}
                                 textAlign={'left'}
                             >
-                                contact@franceprojet.com
+                                contact.franceprojet@gmail.com
                             </Text>{' '}
                         </Flex>
                         <Flex
@@ -154,7 +154,7 @@ const Contact = () => {
                                 lineHeight={'normal'}
                                 textAlign={'left'}
                             >
-                                rue de paris 75000 Paris, rue de paris 75000 Paris, rue de paris 75000 Paris
+                                rue de paris 75000 Paris, rue de paris 75000 Paris
                             </Text>{' '}
                         </Flex>
                     </Flex>
