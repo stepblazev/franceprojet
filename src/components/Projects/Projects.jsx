@@ -10,7 +10,10 @@ import { useEffect, useState } from 'react';
 import { getProjects } from '@/pages/api/api';
 import Link from 'next/link';
 
-const Projects = ({ untitled = false }) => {
+import cls from './project.module.css';
+import { MdOutlineArrowForwardIos } from "react-icons/md";
+
+const Projects = ({ untitled = false }) => {  
     const [isMobile, isDesk] = useMediaQuery([
         '(max-width: 577px)',
         '(min-width: 578px) and (max-width: 1024px)',
@@ -36,7 +39,7 @@ const Projects = ({ untitled = false }) => {
             return '<span class="' + className + '"></span>';
         },
     };
-    
+
     return (
         <SectionLayuot props={{ id: 'realisation' }}>
             <Text
@@ -62,65 +65,42 @@ const Projects = ({ untitled = false }) => {
                     pagination={pagination}
                     modules={[Pagination, Navigation, FreeMode, Thumbs]}
                     className="mySwiper1"
+                    style={{ padding: '8px 0 80px 0' }}
                 >
-                    {router.asPath !== `/project/${router.query.id}`
+                    {router.asPath !== `/project/${router.query.id}` || true
                         ? projects.map(project => (
-                              <SwiperSlide key={crypto.randomUUID()}>
+                              <SwiperSlide key={crypto.randomUUID()} className='swiper-slide-custom' style={{ height: 'auto' }}>
                                   <Link
+                                      className={cls.project}
                                       href={'/project/' + project.slug}
-                                      _hover={{
-                                          textDecoration: ' none',
-                                      }}
-                                      className="link"
                                       aria-label={'/project/' + project.slug}
                                   >
-                                      <Box
-                                          mb={'80px'}
-                                          w={'100%'}
-                                          display={'flex'}
-                                          pos={'relative'}
-                                          justifyContent={'center'}
-                                      >
-                                          <Image
-                                              src={project.photo}
-                                              alt={'image' + project.slug}
-                                              aspectRatio={'1/1'}
-                                              _hover={{
-                                                  opacity: '0.8',
-                                              }}
-                                          />
-                                          <Box
-                                              pos={'absolute'}
-                                              bottom={'0px'}
-                                              right={'0'}
-                                              w={'100%'}
-                                              overflow={'hidden'}
-                                          >
-                                              <Image src="/project_link.png" alt="project1" />
-                                              <Text
-                                                  pos={'absolute'}
-                                                  top={'10%'}
-                                                  left={'2%'}
-                                                  as={'h5'}
-                                                  fontSize={{
-                                                      base: '18px',
-                                                      xmini: '16px',
-                                                      xlg: '20px',
-                                                  }}
-                                                  w={'80%'}
-                                                  fontWeight={{ base: '700' }}
-                                                  color={'#000'}
-                                                  textAlign={'left'}
-                                                  lineHeight={{ base: 'normal' }}
-                                                  textTransform={{
-                                                      base: 'lowercase',
-                                                      md: 'capitalize',
-                                                  }}
-                                              >
-                                                  {project.title}
-                                              </Text>
-                                          </Box>
-                                      </Box>
+                                        <Image
+                                            src={project.photo}
+                                            alt={'image' + project.slug}
+                                            className={cls.project__image}
+                                        />
+                                        <Box className={cls.project__info}>
+                                            <Text
+                                                as={'h5'}
+                                                className={cls.project__title}
+                                                fontSize={{
+                                                    base: '18px',
+                                                    xmini: '16px',
+                                                    xlg: '20px',
+                                                }}
+                                                fontWeight={{ base: '700' }}
+                                                textTransform={{
+                                                    base: 'lowercase',
+                                                    md: 'capitalize',
+                                                }}
+                                            >
+                                                {project.title}
+                                            </Text>
+                                            <Box className={cls.project__arrow}>
+                                                <MdOutlineArrowForwardIos />
+                                            </Box>
+                                        </Box>
                                   </Link>
                               </SwiperSlide>
                           ))
