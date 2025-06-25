@@ -16,7 +16,7 @@ const OurApplication = () => {
             </Flex>
             <Flex w={{ base: '100%', mini: '100%', sm: '100%', lg: '90%' }} alignItems={{ base: 'flex-start', desk: 'center' }} flexDir={{ base: 'column', lg: 'row' }} justifyContent={'space-between'}>
                 {/* <Text as={'p'} w={{base: '100%',lg:'50%', xlg:'60%'}} fontSize={'16px'} fontWeight={600} lineHeight={'22px'} textAlign={'left'} color={'#2E3083'} dangerouslySetInnerHTML={{ __html: t().aboutFranceProjetDesc }} /> */}
-                <Image display={{ base: 'none', xlg: 'block' }} w={{ base: '100%', lg: '40%', desk: '55%' }} src={'/phones.png'} alt={'ourApplication1'} />
+                <Image display={{ base: 'block', xlg: 'block' }} w={{ base: '100%', lg: '40%', desk: '55%' }} src={'/phones.png'} alt={'ourApplication1'} />
                 <Flex flexDir={{ base: 'column' }} gap={{ base: '30px', xl: '90px' }} w={{ base: '100%', xlg: '60%', desk: '45%' }} >
                     <Flex w='100%' justifyContent={'space-between'} alignItems={{ base: 'center', xsm: 'flex-end' }} direction={{ base: 'column-reverse', xsm: 'row' }}>
                         <Box
@@ -29,9 +29,9 @@ const OurApplication = () => {
                         </Box>
                         <Image w={{ base: '240px', xsm: '174px' }} src={'/qrcode.png'} alt={'ourApplication2'} />
                     </Flex>
-                    <Flex w='100%' justifyContent={'space-around'} direction={{ base: 'column', xmini: 'row' }}>
-                        <Image h={{ base: '74px' }} alignSelf={'flex-start'} src={'/appstore.png'} alt={'ourApplication3'} />
-                        <Image mt={{ base: '12px', xmini: '0px' }} h={{ base: '74px' }} alignSelf={'flex-end'} src={'/googleplay.png'} alt={'ourApplication4'} />
+                    <Flex w='100%' justifyContent={'space-around'} direction={{ base: 'row' }}>
+                        <Image h={{ base: '48px', xmini: '74px' }} src={'/appstore.png'} alt={'ourApplication3'} />
+                        <Image h={{ base: '48px', xmini: '74px' }} src={'/googleplay.png'} alt={'ourApplication4'} />
                     </Flex>
 
                 </Flex>
