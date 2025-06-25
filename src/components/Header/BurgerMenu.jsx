@@ -12,8 +12,8 @@ import {
 import { useTranslation } from 'next-i18next';
 import LogoMini from '../../assets/Logo-mini.svg';
 import Logo from '../../assets/Logo.svg';
-import Burger from '../../assets/menu.svg';
 import SelectLocal from './SelectLocal';
+import { IoMdMenu } from "react-icons/io";
 
 const BurgerMenu = () => {
     const { t } = useTranslation('common');
@@ -25,14 +25,13 @@ const BurgerMenu = () => {
 
     return (
         <>
-
-
             <Box
+                className='burger-menu'
                 display={router.pathname !== '/' ? { base: 'block', xdesk: 'none' } : { base: 'block', xlg: 'none' }}
                 onClick={MenuModalAction.onOpen}
                 ref={btnRef}
             >
-                <Burger />
+                <IoMdMenu />
             </Box>
             <Drawer
                 isOpen={MenuModalAction.isOpen}
@@ -41,7 +40,6 @@ const BurgerMenu = () => {
                 finalFocusRef={btnRef}
                 size={'full'}
             >
-
                 <DrawerContent bgColor={'#7B7EB7'} justifyContent={'center'} alignItems={'center'} width={'100%'} h={'100vh'}  >
                     <DrawerCloseButton color={'#FFFFFF'} mt={'9px'} mr={'20px'} />
                     <DrawerHeader alignItems={'center'} w={'100%'} flexDir={'row'} pt={'20px'}>

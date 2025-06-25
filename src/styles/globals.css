@@ -205,3 +205,12 @@ a {
     background-color: #2e3083;
     color: #FFFFFF;
 }
+
+.burger-menu {
+    color: #2e3083;
+    cursor: pointer;
+}
+.burger-menu svg {
+    width: 32px;
+    height: 32px;
+}
