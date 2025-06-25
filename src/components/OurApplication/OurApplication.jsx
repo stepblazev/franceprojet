@@ -3,6 +3,7 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import SectionLayuot from '../UI/Layouts/SectionLayuot';
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 
 const OurApplication = () => {
     const { t } = useTranslation('common');
@@ -30,8 +31,12 @@ const OurApplication = () => {
                         <Image w={{ base: '240px', xsm: '174px' }} src={'/qrcode.png'} alt={'ourApplication2'} />
                     </Flex>
                     <Flex w='100%' justifyContent={'space-around'} direction={{ base: 'row' }}>
-                        <Image h={{ base: '48px', xmini: '74px' }} src={'/appstore.png'} alt={'ourApplication3'} />
-                        <Image h={{ base: '48px', xmini: '74px' }} src={'/googleplay.png'} alt={'ourApplication4'} />
+                        <Link href={'https://apps.apple.com/cg/app/france-projet/id6449452861'} target='_blank'>
+                            <Image h={{ base: '48px', xmini: '74px' }} src={'/appstore.png'} alt={'ourApplication3'} />
+                        </Link>
+                        <Link href={'https://play.google.com/store/apps/details?id=com.parisconstruction.app&pcampaignid=web_share'} target='_blank'>
+                            <Image h={{ base: '48px', xmini: '74px' }} src={'/googleplay.png'} alt={'ourApplication4'} />
+                        </Link>
                     </Flex>
 
                 </Flex>

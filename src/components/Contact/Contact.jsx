@@ -114,6 +114,7 @@ const Contact = () => {
                                 fontWeight={600}
                                 lineHeight={'normal'}
                                 textAlign={'left'}
+                                letterSpacing={'1px'}
                             >
                                 +33769397501
                             </Text>{' '}
@@ -134,6 +135,7 @@ const Contact = () => {
                                 fontWeight={600}
                                 lineHeight={'normal'}
                                 textAlign={'left'}
+                                letterSpacing={'1px'}
                             >
                                 contact.franceprojet@gmail.com
                             </Text>{' '}
@@ -153,6 +155,7 @@ const Contact = () => {
                                 fontWeight={600}
                                 lineHeight={'normal'}
                                 textAlign={'left'}
+                                letterSpacing={'1px'}
                             >
                                 rue de paris 75000 Paris, rue de paris 75000 Paris
                             </Text>{' '}
