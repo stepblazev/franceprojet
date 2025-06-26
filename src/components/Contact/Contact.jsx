@@ -7,9 +7,6 @@ import { FaPhone, FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 
 import { Controller, useForm } from 'react-hook-form';
-import Local from '../../assets/contact_address.svg';
-import Mail from '../../assets/contact_mail.svg';
-import Phone from '../../assets/contact_phone.svg';
 import axios from 'axios';
 import SuccessSubmit from '../UI/Modal/SuccessSubmit';
 
