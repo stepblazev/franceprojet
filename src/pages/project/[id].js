@@ -18,22 +18,18 @@ const ProjectItem = ({ project }) => {
  // Внутри функционального компонента
     const { query } = useRouter();
     // console.log('🚀 ~ ProjectItem ~ router:', query.id);
-
+    
     
     return (
+        <>
+        <Head>
+            {project?.title && <title>{project.title}</title>}
+            {project?.title && <meta property="og:title" content={project.title} />}
+            {project?.photo && <meta property="og:image" content={project.photo} />}
+            <meta property="og:description" content={t('meta:description')} />
+            <meta property="og:type" content="article" />
+        </Head>
         <main>
-                {/* <Head>
-                <meta charset="UTF-8"/>
-                <meta name="keywords" content="Interior Renovation Achievements"/>
-                <meta name="keywords" content="réalisations rénovation d'intérieur"/>
-                <title>France Projet: Discover all interior renovation projects</title>
-                <title>France Projet : Découvrez tous les projets de rénovation d'intérieur</title>
-                
-                <meta name="description" content="Explore the iconic achievements of France Projet, your expert in interior renovation in Paris and the Île-de-France region. Get inspired by our successful transformations to envision the future of your own space."/>
-                <meta name="description" content="Découvrez les réalisations emblématiques de France Projet, votre expert en rénovation d'intérieur à Paris et en Île-de-France.Inspirez-vous de nos transformations réussies pour imaginer le futur de votre propre espace."/>
-
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            </Head> */}
             <SectionLayuot
                 props={{
                     px: {
@@ -156,6 +152,7 @@ const ProjectItem = ({ project }) => {
             <Projects untitled="true" />
             <Contact />
         </main>
+        </>
     );
 };
 
@@ -173,7 +170,7 @@ export async function getStaticProps({ locale, params }) {
     return {
         props: {
             project: projectData,
-            ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
+            ...(await serverSideTranslations(locale ?? 'fr', ['common', 'meta'])),
         },
     };
 }

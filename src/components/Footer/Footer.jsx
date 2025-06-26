@@ -9,6 +9,7 @@ import Link from 'next/link';
 
 import { FaFacebook } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+import useIsHomePage from '@/hooks/useIsHomePage';
 
 const Footer = () => {
     const { t } = useTranslation('common');
@@ -18,6 +19,8 @@ const Footer = () => {
     ]);
 
     const router = useRouter();
+    const isHome = useIsHomePage();
+    
     return (
         <footer>
             <Flex w={'100%'} justifyContent={'space-evenly'} flexDir={'column'} alignItems='center' py={'24px'} gap={{ base: '20px', xsm: '40px' }} px={{ base: '80px', md: '100px', lg: '140px' }}>

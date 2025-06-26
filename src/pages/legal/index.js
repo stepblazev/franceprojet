@@ -2,10 +2,17 @@ import SectionLayuot from '@/components/UI/Layouts/SectionLayuot';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
 import { useTranslation } from 'next-i18next';
+import Head from 'next/head';
 
 const index = ({props}) => {
     const { t } = useTranslation('common');
     return (
+        <>
+        <Head>
+            <title>{t('title')}</title>
+            <meta property="og:title" content={t('title')} />
+            <meta property="og:description" content={t('meta:description')} />
+        </Head>
         <SectionLayuot
             props={{
                 my: { base: '50px', md: '70px', lg: '80px' },
@@ -112,13 +119,14 @@ const index = ({props}) => {
                 <br />
             </p>
         </SectionLayuot>
+        </>
     );
 };
 export async function getStaticProps({ locale }) {
     return {
         props: {
             // blogs: blogsData,
-            ...(await serverSideTranslations(locale, ['common'])),
+            ...(await serverSideTranslations(locale, ['common', 'meta'])),
         },
     };
 }

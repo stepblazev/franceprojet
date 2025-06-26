@@ -1,6 +1,6 @@
 import Logo from '../../assets/Logo.svg';
 import User from '../../assets/User.svg';
-import { Flex, Link, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, useDisclosure } from '@chakra-ui/react';
 import LogoMini from '../../assets/Logo-mini.svg';
 import BurgerMenu from './BurgerMenu';
 import Menu from './Menu';
@@ -12,11 +12,15 @@ import Stepper from '../UI/Modal/Stepper';
 import SelectLocal from './SelectLocal';
 import ReturnBtn from '../UI/Buttons/ReturnBtn';
 import JoinFranceprojet from '../UI/Modal/JoinFranceprojet';
+import Link from 'next/link';
+import useIsHomePage from '@/hooks/useIsHomePage';
 
 const Header = () => {
     const router = useRouter();
     const { t } = useTranslation('common');
     const { isOpen, onClose, onOpen } = useDisclosure()
+    const isHome = useIsHomePage();
+    
     const handelClick = () => {
         if (router.pathname !== '/professional') {
             router.push('/professional')
@@ -31,10 +35,15 @@ const Header = () => {
         <header className='header'>
             <Flex justifyContent='space-between' flexGrow={0} alignItems='center' h='75px' px={{ base: '10px', md: '20px', lg: '30px' }} borderBottom='3px solid #2E3083'>
                 <Flex alignItems='center' justifyContent='space-between' w='100%' display={{ base: 'flex', xlg: 'none' }}>
-                    <Link href={'/'} display={{ base: 'none', sm: 'block' }} aria-label={`Logo`} > <Logo /></Link>
-                    <Link href={'/'} display={{ base: 'block', sm: 'none' }} aria-label={`LogoMini`}> <LogoMini /></Link>
-                    <BurgerMenu
-                    />
+                    <Box display={{ base: 'none', sm: 'block' }}>
+                        {!isHome && <Link href={'/'} aria-label='Logo'><Logo /></Link>}
+                        {isHome && <Box aria-label='Logo'><Logo /></Box>}
+                    </Box>
+                    <Box display={{ base: 'block', sm: 'none' }}>
+                        {!isHome && <Link href={'/'} aria-label='LogoMini'><LogoMini /></Link>}
+                        {isHome && <Box aria-label='LogoMini'><LogoMini /></Box>}
+                    </Box>
+                    <BurgerMenu />
                 </Flex>
 
                 <Flex alignItems='center' justifyContent='space-between' w='100%'
@@ -42,8 +51,14 @@ const Header = () => {
                     gap={'20px'}
                 >
 
-                    <Link href={'/'} display={{ base: 'none', desk: 'block' }} aria-label={`Logo`}> <Logo /></Link>
-                    <Link href={'/'} display={{ base: 'block', desk: 'none' }} aria-label={`LogoMini`}> <LogoMini /></Link>
+                    <Box display={{ base: 'none', desk: 'block' }}>
+                        {!isHome && <Link href={'/'} aria-label='Logo'><Logo /></Link>}
+                        {isHome && <Box aria-label='Logo'><Logo /></Box>}
+                    </Box>
+                    <Box display={{ base: 'block', desk: 'none' }}>
+                        {!isHome && <Link href={'/'} aria-label='LogoMini'><LogoMini /></Link>}
+                        {isHome && <Box aria-label='LogoMini'><LogoMini /></Box>}
+                    </Box>
                     <Menu />
                     <Flex gap={'20px'} alignItems={'center'} maxW={'120px'} w={'100%'} justifyContent={'space-between'}>
                         <Link w={'30px'} h={'30px'} href={'#'} > <User /></Link>
