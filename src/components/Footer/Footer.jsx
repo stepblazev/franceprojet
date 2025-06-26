@@ -223,8 +223,14 @@ const Footer = () => {
                         </Link>
                     </Flex>
                 }
-                <Box display={{ base: 'none', xsm: 'block' }}><Link href={'/'} aria-label={`Logo`}> <Logo /></Link></Box>
-                <Box display={{ base: 'block', xsm: 'none' }}><Link href={'/'} aria-label={`LogoMini`}> <LogoMini /></Link></Box>
+                <Box display={{ base: 'none', xsm: 'block' }}>
+                    {!isHome && <Link href={'/'} aria-label='Logo'><Logo /></Link>}
+                    {isHome && <Box aria-label='Logo'><Logo /></Box>}
+                </Box>
+                <Box display={{ base: 'block', xsm: 'none' }}>
+                    {!isHome && <Link href={'/'} aria-label='LogoMini'><LogoMini /></Link>}
+                    {isHome && <Box aria-label='LogoMini'><LogoMini /></Box>}
+                </Box>
                 <Text display={{ base: 'block', xsm: 'none' }} textAlign={'center'} fontSize={{ base: '12px' }} color={'#999999'} lineHeight={'20px'} dangerouslySetInnerHTML={{ __html: t('copyWrite') }} />
 
             </Flex>
