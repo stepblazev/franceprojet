@@ -11,7 +11,7 @@ const Hero = () => {
     return (
         <Box as={'section'} h={{ base: '850px', mini: '860px',  sm: '960px',xmob: '870px', xsm: '860px' ,md: '870px', lg: '870px',desk: '870px', xdesk: '870px' }} w={'100%'} overflowY={'hidden'}>
             <Flex justifyContent={'center'} flexDir={'column'} alignItems={'start'} h={'100%'} w={'100%'} >
-                <Flex backgroundImage={{base:'url(/Background2_mob.png)', xsm:'url(/Background2.png)'}} backgroundRepeat={'no-repeat'} backgroundSize={'cover'} flexDir={'column'}  justifyContent={{base:'center'}} alignItems={'start'} h={'100%'} w={'100%'}  px={{ base: '15px',sm: '50px',xmd: '80px',xlg: '100px',xdesk: '120px' }}  >
+                <Flex backgroundImage={{base:'url(/optimized/Background2_mob.webp)', xsm:'url(/optimized/Background2.webp)'}} backgroundRepeat={'no-repeat'} backgroundSize={'cover'} flexDir={'column'}  justifyContent={{base:'center'}} alignItems={'start'} h={'100%'} w={'100%'}  px={{ base: '15px',sm: '50px',xmd: '80px',xlg: '100px',xdesk: '120px' }}  >
 
                     <Text as={'p'} color={'#2E3083'} fontSize={'16px'} fontWeight={600} lineHeight={'27px'} textAlign={'left'} mb={'30px'} textTransform={'uppercase'}>{t('franceProjet')}</Text>
                     <Flex flexDir={'column'} alignItems={'start'} maxW={'991px'} w={'100%'} gap={'72px'}>
