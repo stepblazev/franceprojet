@@ -115,20 +115,20 @@ function InnerCheckboxGroup() {
 
             <div>
 				<CustomCheckboxCards {...getCheckboxProps({ value: 'kitchen', text: t('kitchen'), icon: <Kitchen />, onChange: () => handleCheckboxChange('kitchen'), })} />
-				<input type="input" style={{ 'margin-bottom': '30px' }} placeholder={t('area')} id={"surfaceArea_1"} name={"surfaceArea_1"} onChange={handlesurfaceArea1}/>
+				<input type="input" style={{ marginBottom: '30px' }} placeholder={t('area')} id={"surfaceArea_1"} name={"surfaceArea_1"} onChange={handlesurfaceArea1}/>
 			</div>
 			<div>
 				<CustomCheckboxCards {...getCheckboxProps({ value: 'bathroom', text: t('bathroom'), icon: <Bathroom />, onChange: () => handleCheckboxChange('bathroom'), })} />
-				<input type="input" style={{ 'margin-bottom': '30px' }} placeholder={t('area')} id={"surfaceArea_2"} name={"surfaceArea_2"} onChange={handlesurfaceArea2}/>
+				<input type="input" style={{ marginBottom: '30px' }} placeholder={t('area')} id={"surfaceArea_2"} name={"surfaceArea_2"} onChange={handlesurfaceArea2}/>
 			</div>
             {/* <CustomCheckboxCards {...getCheckboxProps({ value: 'toilet', text: t('toilet'), icon: <Toilet />, onChange: () => handleCheckboxChange('toilet'), })} /> */}
             <div>
 				<CustomCheckboxCards {...getCheckboxProps({ value: 'bedroom', text: t('bedroom'), icon: <Bedroom />, onChange: () => handleCheckboxChange('bedroom'), })} />
-				<input type="input" style={{ 'margin-bottom': '30px' }} placeholder={t('area')} id={"surfaceArea_3"} name={"surfaceArea_3"} onChange={handlesurfaceArea3}/>
+				<input type="input" style={{ marginBottom: '30px' }} placeholder={t('area')} id={"surfaceArea_3"} name={"surfaceArea_3"} onChange={handlesurfaceArea3}/>
 			</div>
 			<div>
 				<CustomCheckboxCards {...getCheckboxProps({ value: 'lounge', text: t('livingRoom'), icon: <Lounge />, onChange: () => handleCheckboxChange('lounge'), })} />
-				<input type="input" style={{ 'margin-bottom': '30px' }} placeholder={t('area')} id={"surfaceArea_4"} name={"surfaceArea_4"} onChange={handlesurfaceArea4}/>
+				<input type="input" style={{ marginBottom: '30px' }} placeholder={t('area')} id={"surfaceArea_4"} name={"surfaceArea_4"} onChange={handlesurfaceArea4}/>
 
 			</div>
             {/* <CustomCheckboxCards {...getCheckboxProps({ value: 'garage', text: t('garage'), icon: <Garage />, onChange: () => handleCheckboxChange('garage'), })} /> */}
