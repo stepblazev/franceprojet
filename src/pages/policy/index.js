@@ -23,110 +23,110 @@ const index = ({props}) => {
 
             }}
         >
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.7in' }}>
+            <h1 style={{ lineHeight: '1.5', marginBottom: '0.7in' }}>
                 <font size={6} style={{ fontSize: '26pt' }}>
                     <b>{t('titlePolicy')}</b>
                 </font>
-            </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            </h1>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt' ,fontWeight: '600'}}>
                     {t('subtitle1Policy')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.4in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.4in' }}>
                 {t('description1Policy')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt' ,fontWeight: '600'}}>
                     {t('subtitle2Policy')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.4in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.4in' }}>
                 {t('description2Policy')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt',fontWeight: '600' }}>
                     {t('subtitle3Policy')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 {t('description3Policy')}
             </p>
 
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt',fontWeight: '600' }}>
                     {t('subtitle4Policy')}
                 </font>
             </p>
             <Box pl={'20px'}>
-            <Text mb={'10px'} style={{ lineHeight: '100%', }}>{t('description4PolicyItem1')}</Text> 
-            <Text mb={'10px'}  style={{ lineHeight: '100%',  }}>{t('description4PolicyItem2')}</Text> 
-            <Text style={{ lineHeight: '100%',  }}>{t('description4PolicyItem3')}</Text> 
+            <Text mb={'10px'} style={{ lineHeight: '1.5', }}>{t('description4PolicyItem1')}</Text> 
+            <Text mb={'10px'}  style={{ lineHeight: '1.5',  }}>{t('description4PolicyItem2')}</Text> 
+            <Text style={{ lineHeight: '1.5',  }}>{t('description4PolicyItem3')}</Text> 
 
             </Box>
               
       
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt',fontWeight: '600' }}>
                     {t('subtitle5Policy')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.4in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.4in' }}>
                 {t('description5Policy')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt',fontWeight: '600' }}>
                     {t('subtitle6Policy')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.4in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.4in' }}>
                 {t('description6Policy')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <a name="_GoBack" />
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt' ,fontWeight: '600'}}>
                     {t('subtitle7Policy')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 {t('description7Policy')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt',fontWeight: '600' }}>
                     {t('subtitle8Policy')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 {t('description8Policy')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
         </SectionLayuot>

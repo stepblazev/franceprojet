@@ -19,103 +19,102 @@ const index = ({props}) => {
                 alignItems: 'start',
                 px: { base: '20px', sm: '50px', md: '120px', lg: '180px' },
                 fontSize: { base: '16px!important', md: '18px!important' },
-
             }}
         >
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.7in' }}>
+            <h1 style={{ lineHeight: '1.5', marginBottom: '0.7in' }}>
                 <font size={6} style={{ fontSize: '26pt' }}>
                     <b>{t('title')}</b>
                 </font>
-            </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            </h1>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt',fontWeight: '600' }}>
                     {t('subtitle1')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.4in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.4in' }}>
                 {t('description1')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt' ,fontWeight: '600'}}>
                     {t('subtitle2')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.4in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.4in' }}>
                 {t('description2')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt',fontWeight: '600' }}>
                     {t('subtitle3')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 {t('description3')}
             </p>
 
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt' ,fontWeight: '600'}}>
                     {t('subtitle4')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 {t('description4')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.4in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.4in' }}>
                 {t('description5')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt',fontWeight: '600' }}>
                     {t('subtitle5')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.4in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.4in' }}>
                 {t('description6')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt' ,fontWeight: '600'}}>
                     {t('subtitle6')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.4in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.4in' }}>
                 {t('description7')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <a name="_GoBack" />
                 <br />
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0.2in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0.2in' }}>
                 <font size={4} style={{ fontSize: '16pt' ,fontWeight: '600'}}>
                     {t('subtitle7')}
                 </font>
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 {t('description8')}
             </p>
-            <p style={{ lineHeight: '100%', marginBottom: '0in' }}>
+            <p style={{ lineHeight: '1.5', marginBottom: '0in' }}>
                 <br />
             </p>
         </SectionLayuot>

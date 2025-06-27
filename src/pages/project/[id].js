@@ -44,7 +44,7 @@ const ProjectItem = ({ project }) => {
                 }}
             >
                 <Text
-                    as={'h2'}
+                    as={'h1'}
                     w={{ base: '90%', desk: '100%' }}
                     fontSize={{ base: '32px', md: '55px' }}
                     fontWeight={{ base: '700', md: '800' }}

@@ -39,6 +39,15 @@ const index = ({ blogs }) => {
         </Head>
         <main>
             <SectionLayuot props={{ mt: '20px' }}>
+                <Text 
+                    as={'h1'}
+                    fontSize={{ base: '24px', xsm: '36px' }}
+                    fontWeight={{ base: '700' }}
+                    color={'#2E3083'}
+                    textTransform={'uppercase'}
+                >
+                    {t('blogs')}
+                </Text>
                 <Swiper
                     loop={true}
                     spaceBetween={10}
@@ -58,7 +67,7 @@ const index = ({ blogs }) => {
                                 justifyContent={'start'}
                             >
                                 <Text
-                                    as={'h2'}
+                                    as={'p'}
                                     fontSize={{ base: '20px', xsm: '32px' }}
                                     fontWeight={{ base: '700' }}
                                     color={'#2E3083'}
