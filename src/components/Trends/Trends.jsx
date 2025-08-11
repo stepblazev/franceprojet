@@ -9,6 +9,7 @@ import { Flex, Image,  Text, useMediaQuery } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { getNews } from '@/pages/api/api';
 import Link from 'next/link';
+
 const Trends = ({ untitled = false, px }) => {
     // const { isMobile } = useDeviceDetect();
     const [isMobile, isDesk] = useMediaQuery([
@@ -20,6 +21,7 @@ const Trends = ({ untitled = false, px }) => {
  // Внутри функционального компонента
     const router = useRouter();
     const [news, setNews] = useState([]);
+    
     useEffect(() => {
         getNews(router.locale).then(res => {
             setNews(res.data);
@@ -27,10 +29,8 @@ const Trends = ({ untitled = false, px }) => {
         }).catch(error => {
             console.error('Error fetching news:', error);
         });
-
-
-
     }, [router.locale]);
+    
     const pagination = {
         clickable: true,
         renderBullet: function (index, className) {

@@ -7,6 +7,7 @@ import Red from '../../assets/red_circle.svg';
 import Star from '../../assets/star_hero.svg';
 import SectionLayuot from '../UI/Layouts/SectionLayuot';
 import { useTranslation } from 'next-i18next';
+
 const Opinions = ({display}) => {
     // const { isMobile } = useDeviceDetect();
     const [isMobile] = useMediaQuery([
@@ -29,7 +30,6 @@ const Opinions = ({display}) => {
             <Flex w={{ base: '100%', mini: '100%', sm: '100%', lg: '90%' }}
             >
                 <Swiper
-
                     spaceBetween={35}
                     slidesPerView={isMobile ? 1 : 2}
                     // centeredSlides={true}
@@ -60,14 +60,9 @@ const Opinions = ({display}) => {
                                     <Star />
                                     <Star />
                                     <Star />
-
                                 </Flex>
-
-
                             </Flex>
                         </Flex>
-
-
 
                     </SwiperSlide>
 
@@ -91,9 +86,7 @@ const Opinions = ({display}) => {
                                     <Star />
                                     <Star />
                                     <Star />
-
                                 </Flex>
-
 
                             </Flex>
                         </Flex>

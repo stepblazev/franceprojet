@@ -10,11 +10,7 @@ import { Select, chakraComponents } from "chakra-react-select";
 import { Box, Icon } from '@chakra-ui/react';
 // import { countries_menu } from '@/utils';
 
-import Down from '@/assets/select_down.svg';
-import Up from '@/assets/select_up.svg';
 import English from '@/assets/En.svg';
-
-
 import France from '@/assets/Fr.svg';
 import Russian from '@/assets/Ru.svg';
 // import useLocalization from '../hooks/useLocalization';
@@ -115,6 +111,7 @@ const SelectLocal = ({ isBurgerMenuOpen = false }) => {
                         },
                         display: "flex",
                         gap: "10px",
+                        cursor: 'pointer'
                     }),
                     control: () => ({
                         border: "none",

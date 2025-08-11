@@ -13,7 +13,7 @@ const Hero = () => {
     return (
         <Box as={'section'}  h={{ base: '797px', md: '742px' }} w={'100%'} >
             <Flex  justifyContent={'center'} flexDir={'column'} alignItems={'start'} h={'100%'} w={'100%'} >
-            <Flex  backgroundImage={'url(/Background.png)'} backgroundRepeat={'no-repeat'} backgroundPosition={'right'}  flexDir={'column'} justifyContent={'center'} alignItems={'start'} h={'100%'} w={'100%'} px={{ base: '15px',sm: '50px',xmd: '80px',xlg: '100px',xdesk: '120px' }} >
+            <Flex  backgroundImage={'url(/optimized/Background.webp)'} backgroundRepeat={'no-repeat'} backgroundPosition={'right'}  flexDir={'column'} justifyContent={'center'} alignItems={'start'} h={'100%'} w={'100%'} px={{ base: '15px',sm: '50px',xmd: '80px',xlg: '100px',xdesk: '120px' }} >
                
                 <Text as={'p'} display={{ base: 'none', xmd: 'block' }} color={'#2E3083'} fontSize={'16px'} fontWeight={600} lineHeight={'27px'} textAlign={'left'} mb={'30px'} textTransform={'uppercase'}>{t('franceProjet')}</Text>
                 <Flex flexDir={'column'} alignItems={'start'} maxW={'991px'} w={'100%'} gap={'35px'}>

@@ -4,10 +4,13 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 // import Link from 'next/link';
 import Logo from '../../assets/Logo.svg';
-import Instagram from '../../assets/instagram.svg';
-import Linkedin from '../../assets/linkedin-icon.svg';
 import LogoMini from '../../assets/Logo-mini.svg';
 import Link from 'next/link';
+
+import { FaFacebook } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import useIsHomePage from '@/hooks/useIsHomePage';
+
 const Footer = () => {
     const { t } = useTranslation('common');
     // Внутри функционального компонента
@@ -16,13 +19,19 @@ const Footer = () => {
     ]);
 
     const router = useRouter();
+    const isHome = useIsHomePage();
+    
     return (
         <footer>
             <Flex w={'100%'} justifyContent={'space-evenly'} flexDir={'column'} alignItems='center' py={'24px'} gap={{ base: '20px', xsm: '40px' }} px={{ base: '80px', md: '100px', lg: '140px' }}>
                 {!isMobile &&
-                    <Flex gap={'10px'} flexDir={'row'}>
-                        <Link href={'/'} aria-label={`Linkedin`}> <Linkedin /></Link>
-                        <Link href={'/'} aria-label={`Instagram`}> <Instagram /></Link>
+                    <Flex gap={'10px'} flexDir={'row'} alignItems={'center'}>
+                        <Link className='social-link' target={'_blank'} href={'https://www.instagram.com/franceprojet?igsh=MTllaWg1c3d6ZDV1cA=='} aria-label={`Instagram`}>
+                            <RiInstagramFill />
+                        </Link>
+                        <Link className='social-link' target={'_blank'} href={'https://www.facebook.com/share/1FAfR6T58s/?mibextid=wwXIfr'} aria-label={`Facebook`}>
+                            <FaFacebook />
+                        </Link>
                     </Flex>
                 }
 
@@ -206,12 +215,22 @@ const Footer = () => {
                 </Flex>
                 {isMobile &&
                     <Flex gap={'10px'} flexDir={'row'}>
-                        <Link href={'/'} aria-label={`Linkedin`}> <Linkedin /></Link>
-                        <Link href={'/'} aria-label={`Instagram`}> <Instagram /></Link>
+                        <Link className='social-link' target={'_blank'} href={'https://www.instagram.com/franceprojet?igsh=MTllaWg1c3d6ZDV1cA=='} aria-label={`Instagram`} title={'Instagram'}>
+                            <RiInstagramFill />
+                        </Link>
+                        <Link className='social-link' target={'_blank'} href={'https://www.facebook.com/share/1FAfR6T58s/?mibextid=wwXIfr'} aria-label={`Facebook`} title={'Facebook'}>
+                            <FaFacebook />
+                        </Link>
                     </Flex>
                 }
-                <Box display={{ base: 'none', xsm: 'block' }}><Link href={'/'} aria-label={`Logo`}> <Logo /></Link></Box>
-                <Box display={{ base: 'block', xsm: 'none' }}><Link href={'/'} aria-label={`LogoMini`}> <LogoMini /></Link></Box>
+                <Box display={{ base: 'none', xsm: 'block' }}>
+                    {!isHome && <Link href={'/'} aria-label='Logo'><Logo /></Link>}
+                    {isHome && <Box aria-label='Logo'><Logo /></Box>}
+                </Box>
+                <Box display={{ base: 'block', xsm: 'none' }}>
+                    {!isHome && <Link href={'/'} aria-label='LogoMini'><LogoMini /></Link>}
+                    {isHome && <Box aria-label='LogoMini'><LogoMini /></Box>}
+                </Box>
                 <Text display={{ base: 'block', xsm: 'none' }} textAlign={'center'} fontSize={{ base: '12px' }} color={'#999999'} lineHeight={'20px'} dangerouslySetInnerHTML={{ __html: t('copyWrite') }} />
 
             </Flex>

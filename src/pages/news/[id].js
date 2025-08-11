@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { getOneNews } from '../api/api';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next';
+import Head from 'next/head';
 
 function formatDate(inputDate) {
     const dateParts = inputDate?.split(" ");
@@ -25,9 +26,15 @@ const index = ({ news }) => {
     const { query } = useRouter();
     // const [news, setNews] = useState([]);
 
-
-
     return (
+        <>
+        <Head>
+            {news?.title && <title>{news.title}</title>}
+            {news?.title && <meta property="og:title" content={news.title} />}
+            {news?.photo && <meta property="og:image" content={news.photo} />}
+            <meta property="og:description" content={t('meta:description')} />
+            <meta property="og:type" content="article" />
+        </Head>
         <main>
             <SectionLayuot
                 props={{
@@ -88,6 +95,7 @@ const index = ({ news }) => {
             }} />
             <Contact />
         </main>
+        </>
     );
 };
 
@@ -106,7 +114,7 @@ export async function getStaticProps({ locale, params }) {
     return {
         props: {
             news: newsData,
-            ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
+            ...(await serverSideTranslations(locale ?? 'fr', ['common', 'meta'])),
         },
     };
 }

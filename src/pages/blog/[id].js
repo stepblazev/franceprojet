@@ -12,11 +12,12 @@ import { FreeMode, Navigation, Thumbs } from 'swiper';
 import { getBlogs } from '../api/api';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Loader from '@/components/UI/Loader';
+import Head from 'next/head';
+import { useTranslation } from 'next-i18next';
 
-// import { useTranslation } from 'next-i18next';
 const index = ({ blogs }) => {
-    // const { t } = useTranslation('common');
-    console.log('🚀 ~ index ~ blogs:', blogs);
+    const { t } = useTranslation('common');
+    // console.log('🚀 ~ index ~ blogs:', blogs);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const [swiperRef, setSwiperRef] = useState(null);
 
@@ -30,20 +31,23 @@ const index = ({ blogs }) => {
     }, [swiperRef]);
 
     return (
+        <>
+        <Head>
+            <title>{t('blogs')}</title>
+            <meta property="og:title" content={t('blogs')} />
+            <meta property="og:description" content={t('meta:description')} />
+        </Head>
         <main>
-                {/* <Head>
-                <meta charset="UTF-8"/>
-                <meta name="keywords" content="blog de rénovation d'intérieur"/>
-                <meta name="keywords" content="Interior renovation blog"/>
-                <title>France Projet: Tips and Trends in interior renovation</title>
-                <title>France Projet : Conseils et Tendances en Rénovation d'intérieur</title>
-                
-                <meta name="description" content="Follow the France Projet blog to explore the latest trends, tips, and tricks in interior renovation. Whether you're renovating in Paris or the Île-de-France region, our expertise guides you through every step of your project."/>
-                <meta name="description" content="Suivez le blog de France Projet pour explorer les dernières tendances, conseils, et astuces en matière de rénovation d'intérieur. Que vous rénoviez à Paris ou en Île-de-France, notre expertise vous guide dans chaque étape de votre projet. "/>
-
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            </Head> */}
             <SectionLayuot props={{ mt: '20px' }}>
+                <Text 
+                    as={'h1'}
+                    fontSize={{ base: '24px', xsm: '36px' }}
+                    fontWeight={{ base: '700' }}
+                    color={'#2E3083'}
+                    textTransform={'uppercase'}
+                >
+                    {t('blogs')}
+                </Text>
                 <Swiper
                     loop={true}
                     spaceBetween={10}
@@ -63,7 +67,7 @@ const index = ({ blogs }) => {
                                 justifyContent={'start'}
                             >
                                 <Text
-                                    as={'h2'}
+                                    as={'p'}
                                     fontSize={{ base: '20px', xsm: '32px' }}
                                     fontWeight={{ base: '700' }}
                                     color={'#2E3083'}
@@ -128,6 +132,7 @@ const index = ({ blogs }) => {
             </SectionLayuot>
             <Contact />
         </main>
+        </>
     );
 };
 
@@ -180,7 +185,7 @@ export async function getStaticProps({ locale }) {
         return {
             props: {
                 blogs: blogsData,
-                ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
+                ...(await serverSideTranslations(locale ?? 'fr', ['common', 'meta'])),
             },
         };
     } catch (error) {

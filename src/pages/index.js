@@ -14,51 +14,51 @@ import Projects from '@/components/Projects/Projects';
 import Renovation from '@/components/Renovation/Renovation';
 import Trends from '@/components/Trends/Trends';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Head from 'next/head';
 
-
-import FormOpenBtn from '@/components/UI/Buttons/FormOpenBtn';
 import WhyPutTrust from '@/components/WhyPutTrust/WhyPutTrust';
-// import { Form } from "react-hook-form";
+import { useTranslation } from 'next-i18next';
 
 function Home({props}) {
+    const { t } = useTranslation();
+    
     return (
+        <>
+        <Head>
+            <title>{t('meta:title')}</title>
+            <meta name="description" content={t('meta:description')} />
+            <meta property="og:title" content={t('meta:title')} />
+            <meta property="og:description" content={t('meta:description')} />
+            <meta property="og:type" content="website" />
+        </Head>
         <main>
             <Hero />
             <Benefits />
             <Renovation />
             <Projects />
             <Partners />
-            <Opinions  display={{ base: 'none', xmini: 'flex' }}/>
+            <Opinions/>
             <AboutFranceProjet />
             <OurApplication />
             <Trends />
             <WhyPutTrust />
-            <Opinions  display={{ base: 'flex', xmini: 'none' }}/>
 
             <Join />
             <Blogs />
             <Faq />
             <Contact />
         </main>
+        </>
     );
 }
 
-
-//   export async function getStaticProps({ locale }) {
-//         return {
-//             props: {
-//                 // blogs: blogsData,
-//                 ...(await serverSideTranslations(locale, ['common'])),
-//             },
-//         };
-
-// }
 export async function getStaticProps({ locale }) {
     return {
         props: {
             locale, // Уточните язык для страницы
-            ...(await serverSideTranslations(locale, ['common'])),
+            ...(await serverSideTranslations(locale, ['common', 'meta'])),
         },
     };
 }
+
 export default Home;

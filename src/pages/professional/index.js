@@ -9,22 +9,18 @@ import Hero from '@/components/Professional/Hero';
 import OurApplication from '@/components/Professional/OurApplication';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
+import { useTranslation } from 'next-i18next';
 
 function Professional({props}) {
+    const { t } = useTranslation('common');
+    
     return (
         <main>
-            {/* <Head>
-                <meta charset="UTF-8"/>
-                <meta name="keywords" content="Artisan trouver chantier rénovation"/>
-                <meta name="keywords" content="Craftsman Find Renovation Projects"/>
-                <title>France Projet: Join our partner network</title>
-                <title>France Projet : Rejoindre notre réseau partenaire</title>
-                
-                <meta name="description" content="Are you an interior architect, space designer, or construction expert? Join our partner network to find new projects and get the best prices on your material purchases."/>
-                <meta name="description" content="Vous êtes architecte d'intérieur, designer d'espace ou expert en travaux ? Rejoignez notre réseau partenaire pour trouver de nouveaux projets et obtenir le meilleur prix sur vos achats de matériaux."/>
-
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            </Head> */}
+            <Head>
+                <title>{t('joinUs')}</title>
+                <meta property="og:title" content={t('joinUs')} />
+                <meta property="og:description" content={t('meta:description')} />
+            </Head>
             <Hero/>
             <OurApplication/>
             <Advantages/>
@@ -41,7 +37,7 @@ function Professional({props}) {
         return {
             props: {
                 // blogs: blogsData,
-                ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
+                ...(await serverSideTranslations(locale ?? 'fr', ['common', 'meta'])),
             },
         };
 

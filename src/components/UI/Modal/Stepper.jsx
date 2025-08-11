@@ -80,19 +80,19 @@ function InnerCheckboxGroup() {
     const [selectedValues, setSelectedValues] = useState([]);
 
     const handlesurfaceArea1 = (value) => {
-        console.log(value.target.value)
+        // console.log(value.target.value)
         localStorage.setItem('surfaceArea1',value.target.value)
     };
     const handlesurfaceArea2 = (value) => {
-        console.log(value.target.value)
+        // console.log(value.target.value)
         localStorage.setItem('surfaceArea2',value.target.value)
     };
     const handlesurfaceArea3 = (value) => {
-        console.log(value.target.value)
+        // console.log(value.target.value)
         localStorage.setItem('surfaceArea3',value.target.value)
     };
     const handlesurfaceArea4= (value) => {
-        console.log(value.target.value)
+        // console.log(value.target.value)
         localStorage.setItem('surfaceArea4',value.target.value)
     };
 
@@ -115,20 +115,20 @@ function InnerCheckboxGroup() {
 
             <div>
 				<CustomCheckboxCards {...getCheckboxProps({ value: 'kitchen', text: t('kitchen'), icon: <Kitchen />, onChange: () => handleCheckboxChange('kitchen'), })} />
-				<input type="input" style={{ 'margin-bottom': '30px' }} placeholder={t('area')} id={"surfaceArea_1"} name={"surfaceArea_1"} onChange={handlesurfaceArea1}/>
+				<input type="input" style={{ marginBottom: '30px' }} placeholder={t('area')} id={"surfaceArea_1"} name={"surfaceArea_1"} onChange={handlesurfaceArea1}/>
 			</div>
 			<div>
 				<CustomCheckboxCards {...getCheckboxProps({ value: 'bathroom', text: t('bathroom'), icon: <Bathroom />, onChange: () => handleCheckboxChange('bathroom'), })} />
-				<input type="input" style={{ 'margin-bottom': '30px' }} placeholder={t('area')} id={"surfaceArea_2"} name={"surfaceArea_2"} onChange={handlesurfaceArea2}/>
+				<input type="input" style={{ marginBottom: '30px' }} placeholder={t('area')} id={"surfaceArea_2"} name={"surfaceArea_2"} onChange={handlesurfaceArea2}/>
 			</div>
             {/* <CustomCheckboxCards {...getCheckboxProps({ value: 'toilet', text: t('toilet'), icon: <Toilet />, onChange: () => handleCheckboxChange('toilet'), })} /> */}
             <div>
 				<CustomCheckboxCards {...getCheckboxProps({ value: 'bedroom', text: t('bedroom'), icon: <Bedroom />, onChange: () => handleCheckboxChange('bedroom'), })} />
-				<input type="input" style={{ 'margin-bottom': '30px' }} placeholder={t('area')} id={"surfaceArea_3"} name={"surfaceArea_3"} onChange={handlesurfaceArea3}/>
+				<input type="input" style={{ marginBottom: '30px' }} placeholder={t('area')} id={"surfaceArea_3"} name={"surfaceArea_3"} onChange={handlesurfaceArea3}/>
 			</div>
 			<div>
 				<CustomCheckboxCards {...getCheckboxProps({ value: 'lounge', text: t('livingRoom'), icon: <Lounge />, onChange: () => handleCheckboxChange('lounge'), })} />
-				<input type="input" style={{ 'margin-bottom': '30px' }} placeholder={t('area')} id={"surfaceArea_4"} name={"surfaceArea_4"} onChange={handlesurfaceArea4}/>
+				<input type="input" style={{ marginBottom: '30px' }} placeholder={t('area')} id={"surfaceArea_4"} name={"surfaceArea_4"} onChange={handlesurfaceArea4}/>
 
 			</div>
             {/* <CustomCheckboxCards {...getCheckboxProps({ value: 'garage', text: t('garage'), icon: <Garage />, onChange: () => handleCheckboxChange('garage'), })} /> */}
@@ -193,7 +193,7 @@ const StepperComp = ({ onClose, isOpen }) => {
         count: steps.length,
     })
     const [selectedOutIndoor, setSelectedOutIndoor] = useState('indoor'); // Стейт для отслеживания выбора
-    console.log(selectedOutIndoor);
+    // console.log(selectedOutIndoor);
     const handleRadioChange = (value) => {
         setSelectedOutIndoor(value);
     };
@@ -215,7 +215,7 @@ const StepperComp = ({ onClose, isOpen }) => {
     const btnRef = useRef(null)
 
 
-    console.log('activeStep', activeStep)
+    // console.log('activeStep', activeStep)
 
     const {
         control,
@@ -250,10 +250,10 @@ const StepperComp = ({ onClose, isOpen }) => {
         modalRef.current?.scrollIntoView({ behavior: 'smooth' });
 
         if (isLastStep) return
-        console.log('11111', activeStep)
+        // console.log('11111', activeStep)
         const isValid = await trigger(); // Запускаем валидацию всех полей формы
         if (isValid) {
-            console.log('22222', activeStep)
+            // console.log('22222', activeStep)
 
             setActiveStep(activeStep + 1); // Переходим на следующий шаг, если все поля валидны
         }
@@ -276,7 +276,7 @@ const StepperComp = ({ onClose, isOpen }) => {
 
 		
 
-        console.log(JSON.stringify(data));
+        // console.log(JSON.stringify(data));
 		//alert(data.surfaceAreaRenovated)
         // console.log('files', JSON.stringify(extractedData))
 

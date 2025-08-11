@@ -18,6 +18,8 @@ import '@/styles/swiper.css';
 import { FileProvider } from '@/components/UI/FileProvider';
 import Loader from '@/components/UI/Loader';
 import Head from 'next/head';
+import Gloader from '@/components/Gloader/Gloader';
+import ToTop from '@/components/ToTop/ToTop';
 // import '../../i18n'
 function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -31,7 +33,9 @@ function MyApp({ Component, pageProps }) {
                 <FileProvider>
                 <Suspense fallback={<Loader />}>
                     <Layout>
-                            <Component {...pageProps} />
+                        <Gloader />
+                        <ToTop />
+                        <Component {...pageProps} />
                     </Layout>
                 </Suspense>
                     

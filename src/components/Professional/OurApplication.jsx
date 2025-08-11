@@ -3,6 +3,7 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import SectionLayuot from '../UI/Layouts/SectionLayuot';
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 
 const OurApplication = () => {
     const { t } = useTranslation('common');
@@ -40,9 +41,12 @@ const OurApplication = () => {
 
                     </Flex>
                     <Flex w='100%' justifyContent={'space-evenly'} gap={{ base: '20px', xl: '50px' }}>
-
-                        <Image w={{ base: '92px',xsm:'236px' }} h={{ base: '30px',xsm:'74px' }} src={'/appstore.png'} alt={'ourApplication6'} />
-                        <Image w={{ base: '92px',xsm:'236px' }} h={{ base: '30px',xsm:'74px' }} src={'/googleplay.png'} alt={'ourApplication7'} />
+                        <Link href={'https://apps.apple.com/cg/app/france-projet/id6449452861'} target='_blank'>
+                            <Image w={{ base: '92px',xsm:'236px' }} h={{ base: '30px',xsm:'74px' }} src={'/appstore.png'} alt={'ourApplication6'} />
+                        </Link>
+                        <Link href={'https://play.google.com/store/apps/details?id=com.parisconstruction.app&pcampaignid=web_share'} target='_blank'>
+                            <Image w={{ base: '92px',xsm:'236px' }} h={{ base: '30px',xsm:'74px' }} src={'/googleplay.png'} alt={'ourApplication7'} />
+                        </Link>
                     </Flex>
 
                 </Flex>
