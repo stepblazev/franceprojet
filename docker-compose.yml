@@ -50,8 +50,7 @@ services:
         done;
         php artisan storage:link &&
         php artisan migrate --force &&
-        php artisan db:seed --force &&
-        php-fpm
+        php artisan db:seed --force
       "
     labels: 
       - "traefik.enable=true"
