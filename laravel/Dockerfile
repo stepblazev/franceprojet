@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
 
 # Установка Node.js через nvm
 ENV NVM_DIR=/usr/local/nvm
-ENV NODE_VERSION=25.3.0
+ENV NODE_VERSION=24.11.0
 RUN mkdir -p $NVM_DIR \
     && curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash \
     && . "$NVM_DIR/nvm.sh" \
