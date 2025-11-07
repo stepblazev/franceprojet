@@ -54,6 +54,7 @@ services:
       - "traefik.http.routers.backend.rule=Host(`backend.${DOMAIN}`)"
       - "traefik.http.routers.backend.entrypoints=websecure"
       - "traefik.http.routers.backend.tls.certresolver=letsencrypt"
+      - "traefik.http.services.backend.loadbalancer.server.port=8000"
     environment:
       - APP_ENV=production
       - APP_DEBUG=false
