@@ -1,0 +1,70 @@
+.totop {
+    position: fixed;
+    bottom: 64px;
+    right: 120px;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(120px);
+    transition: all 0.5s ease;
+}
+
+.totop._active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.totop__button {
+    padding: 12px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f56b;
+    backdrop-filter: blur(4px);
+    font-size: 12px;
+    white-space: nowrap;
+    color: var(--primary-color);
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.totop__button:hover {
+    background: #e9e9e9ad;
+}
+
+.totop__icon {
+    width: 32px;
+    height: 32px;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .totop {
+        right: 64px;
+    }
+}
+
+@media (max-width: 530px) {
+    .totop {
+        right: 24px;
+        bottom: 12px;
+    }
+}
+
+@media (max-width: 410px) {
+    .totop {
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+    }
+    .totop__button {
+        width: 100%;
+        flex-direction: row;
+        gap: 12px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
+

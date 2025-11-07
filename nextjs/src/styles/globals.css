@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #2E3083;
+    --secondary-color: #d22827;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Roboto:wght@300;500;700;900&display=swap');
+
+html,
+body {
+    max-width: 100vw;
+    /* overflow-x: hidden; */
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+    z-index: 10;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.arrow {
+    width: 24px;
+    position: relative;
+    left: 49%;
+    margin-left: -3px;
+    top: 0;
+    animation: moveArrow 2s infinite alternate;
+}
+@media screen and (max-width: 480px) {
+    .arrow {
+        display: none;
+    }
+    .arrow-down {
+        display: none;
+    }
+}
+.arrow-down {
+    height: 100px;
+    padding-top: 50px;
+    padding-bottom: 0;
+    animation: moveArrow 2s infinite alternate;
+}
+@keyframes moveArrow {
+    0% {
+        padding-top: 70px;
+        padding-bottom: 0;
+    }
+    100% {
+        padding-bottom: 70px;
+        padding-top: 0;
+    }
+}
+.link {
+    display: block;
+    width: 100%;
+}
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* Соотношение сторон для адаптивного видео (16:9) */
+    overflow: hidden; /* Скрыть часть карты, выходящую за границы контейнера */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.form_btn {
+    background-color: #7b7eb7;
+    width: 247px;
+    height: 52px;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 5px 5px;
+    white-space: nowrap;
+
+    border-radius: 0px !important;
+}
+.form_btn_red {
+    background-color: #d22827;
+    width: 247px;
+    height: 52px;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 5px 5px;
+    white-space: nowrap;
+
+    border-radius: 0px !important;
+}
+@media screen and (max-width: 777px) {
+    .form_btn {
+        width: 100%;
+        background-color: #2e3083;
+    }
+    .form_btn_red {
+        width: 100%;
+    }
+}
+
+.joinLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 52px;
+    padding-inline-end: 15px;
+    padding-inline-start: 15px;
+    background-color: white;
+    width: fit-content;
+    min-width: 247px;
+    border-radius: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: '#2e3083!important';
+}
+.joinLinkDesk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 52px;
+    padding-inline-end: 15px;
+    padding-inline-start: 15px;
+    background-color: #2e3083;
+    width: fit-content;
+    min-width: 247px;
+    border-radius: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: '#ffffff!important';
+}
+@media screen and (min-width: 577px) {
+    .joinLink  {
+        display: none;
+    }
+    .joinLinkDesk {
+        display: flex;
+    }
+}
+
+
+.container_maps {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 10px;
+  }
+  
+  .result_maps {
+    height: 1rem;
+    padding: 8px;
+  }
+  
+  
+.contact-icon {
+    width: 20px;
+    height: 20px;
+}
+@media screen and (max-width: 529px) {
+    .contact-icon {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.social-link {
+    padding: 8px;
+    border: 2px solid #2e3083;
+    border-radius: 50%;
+    overflow: hidden;
+    color: #2e3083;
+    transition: all 0.3s ease;
+}
+.social-link svg {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+}
+.social-link:hover {
+    background-color: #2e3083;
+    color: #FFFFFF;
+}
+
+.burger-menu {
+    color: #2e3083;
+    cursor: pointer;
+}
+.burger-menu svg {
+    width: 32px;
+    height: 32px;
+}
