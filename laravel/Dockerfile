@@ -16,6 +16,4 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 RUN chown -R www-data:www-data storage \
     && chown -R www-data:www-data bootstrap/cache
     
-EXPOSE 8000
-    
 CMD ["apache2-foreground"]
