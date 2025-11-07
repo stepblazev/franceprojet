@@ -43,11 +43,16 @@ services:
     container_name: laravel
     restart: unless-stopped
     command: >
-          sh -c "
-          php artisan storage:link &&
-          php artisan migrate --force && 
-          php artisan db:seed --force
-          ",
+      sh -c "
+        until nc -z db 3306; do
+          echo 'Waiting for MySQL...';
+          sleep 2;
+        done;
+        php artisan storage:link &&
+        php artisan migrate --force &&
+        php artisan db:seed --force &&
+        php-fpm
+      "
     labels: 
       - "traefik.enable=true"
       - "traefik.http.routers.backend.rule=Host(`backend.${DOMAIN}`)"
@@ -62,6 +67,8 @@ services:
       - DB_PASSWORD=${MYSQL_PASSWORD}
     depends_on:
       - db
+    volumes:
+      - ./laravel/storage:/var/www/html/storage
     networks:
       - franceprojet_net
 
