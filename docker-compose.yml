@@ -42,8 +42,13 @@ services:
       dockerfile: Dockerfile
     container_name: laravel
     restart: unless-stopped
-    entrypoint: ["/var/www/html/entrypoint.sh"]
-    labels:
+    command: >
+          sh -c "
+          php artisan storage:link &&
+          php artisan migrate --force && 
+          php artisan db:seed --force
+          ",
+    labels: 
       - "traefik.enable=true"
       - "traefik.http.routers.backend.rule=Host(`backend.${DOMAIN}`)"
       - "traefik.http.routers.backend.entrypoints=websecure"
