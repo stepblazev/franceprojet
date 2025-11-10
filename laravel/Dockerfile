@@ -25,10 +25,12 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
     && composer install --no-dev --optimize-autoloader \
     && php artisan key:generate
 
-# Сборка фронтенда
 RUN npm ci && npm run build
 
 RUN a2enmod rewrite
+
+COPY apache/laravel.conf /etc/apache2/sites-available/000-default.conf
+
 RUN chown -R www-data:www-data storage bootstrap/cache
 
 COPY entrypoint.sh /usr/local/bin/
