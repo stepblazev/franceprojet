@@ -4,7 +4,6 @@ RUN apt-get update && apt-get install -y \
     git zip unzip curl gnupg build-essential libpng-dev libjpeg-dev libfreetype6-dev libonig-dev libxml2-dev \
     && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd
 
-# Установка Node.js через nvm
 ENV NVM_DIR=/usr/local/nvm
 ENV NODE_VERSION=24.11.0
 RUN mkdir -p $NVM_DIR \
@@ -31,4 +30,6 @@ RUN npm ci && npm run build
 
 RUN chown -R www-data:www-data storage bootstrap/cache
 
-CMD ["apache2-foreground"]
+COPY entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
