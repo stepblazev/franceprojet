@@ -31,8 +31,6 @@ RUN a2enmod rewrite
 
 COPY apache/laravel.conf /etc/apache2/sites-available/000-default.conf
 
-RUN chown -R www-data:www-data storage bootstrap/cache
-
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
