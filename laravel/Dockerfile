@@ -29,14 +29,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 RUN npm ci && npm run build
 
 RUN a2enmod rewrite
-RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
+RUN chown -R www-data:www-data storage bootstrap/cache
 
-RUN chown -R www-data:www-data /var/www/html \
-    && find /var/www/html -type f -exec chmod 644 {} \; \
-    && find /var/www/html -type d -exec chmod 755 {} \;
-
-    
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
-
 ENTRYPOINT ["entrypoint.sh"]
