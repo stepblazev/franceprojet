@@ -54,13 +54,14 @@ services:
       - "traefik.http.routers.backend.entrypoints=websecure"
       - "traefik.http.routers.backend.tls.certresolver=letsencrypt"
       - "traefik.http.services.backend.loadbalancer.server.port=8000"
-    environment:
-      - APP_ENV=production
-      - APP_DEBUG=true
-      - DB_HOST=db
-      - DB_DATABASE=${MYSQL_DATABASE}
-      - DB_USERNAME=${MYSQL_USER}
-      - DB_PASSWORD=${MYSQL_PASSWORD}
+      - "traefik.http.middlewares.redirect-https.headers.customrequestheaders.X-Forwarded-Proto=https"
+    # environment:
+    #   - APP_ENV=production
+    #   - APP_DEBUG=true
+    #   - DB_HOST=db
+    #   - DB_DATABASE=${MYSQL_DATABASE}
+    #   - DB_USERNAME=${MYSQL_USER}
+    #   - DB_PASSWORD=${MYSQL_PASSWORD}
     depends_on:
       - db
     volumes:
