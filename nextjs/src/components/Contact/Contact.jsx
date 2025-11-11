@@ -154,7 +154,7 @@ const Contact = () => {
                                 textAlign={'left'}
                                 letterSpacing={'1px'}
                             >
-                                rue de paris 75000 Paris, rue de paris 75000 Paris
+                                11 Rue de Magdebourg, 75116 Paris, France
                             </Text>{' '}
                         </Flex>
                     </Flex>
