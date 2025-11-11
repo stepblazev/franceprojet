@@ -65,6 +65,9 @@ class ProjectController extends Controller
                 'text' => $request->get('text')[$item->value],
                 'block_left' => $request->get('block_left')[$item->value],
                 'block_right' => $request->get('block_right')[$item->value],
+                'feedback' => $request->get('feedback')[$item->value],
+                'feedback_author' => $request->get('feedback_author')[$item->value],
+                'feedback_job' => $request->get('feedback_job')[$item->value],
                 'project_id' => $createdId->id,
                 'language_id' => $item->id,
             ]);
@@ -100,6 +103,9 @@ class ProjectController extends Controller
                         'text' => $request->get('text')[$item->value],
                         'block_left' => $request->get('block_left')[$item->value],
                         'block_right' => $request->get('block_right')[$item->value],
+                        'feedback' => $request->get('feedback')[$item->value],
+                        'feedback_author' => $request->get('feedback_author')[$item->value],
+                        'feedback_job' => $request->get('feedback_job')[$item->value],
                         'project_id' => $project->id,
                         'language_id' => $item->id,
                     ]);
@@ -132,6 +138,9 @@ class ProjectController extends Controller
                 'text' => $translation->text,
                 'block_left' => $translation->block_left,
                 'block_right' => $translation->block_right,
+                'feedback' => $translation->feedback,
+                'feedback_author' => $translation->feedback_author,
+                'feedback_job' => $translation->feedback_job,
                 'language' => $translation->lang,
             ]);
         }

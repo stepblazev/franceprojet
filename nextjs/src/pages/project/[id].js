@@ -92,30 +92,29 @@ const ProjectItem = ({ project }) => {
                             </Box>
                         </Box>
                     )}
-                    <Flex flexBasis={{ base: 'auto', xlg:'50%'}} justifyContent={'center'} alignItems={'center'}>
-                        <Box w={{ base: '100%', xmd: '75%'}} backgroundColor={'#F5F5F5'} padding={{ base: '20px', sm: '32px 32px 18px 32px'}}>
-                            <Flex justify={'space-between'} align={'center'} color={theme.colors.d_black}>
-                                <ImQuotesLeft fontSize={'40px'} />
-                                <Text as={'p'} fontSize={'24px'} fontWeight={700} textTransform={'uppercase'} whiteSpace={'nowrap'}>
-                                    Feedback
-                                </Text>
-                            </Flex>
-                            <Text mt={'24px'} as={'p'} fontSize={{ base: '12px', xmini: '16px' }} lineHeight={'1.75'} fontStyle={'italic'}>
-                                I recently used a construction service for a home renovation project, and I couldn't be happier with the results. The team was professional, efficient, and knowledgeable throughout the entire process. They communicated with me regularly to ensure that everything was going according to plan and made sure that any issues were promptly addressed. 
-                            </Text>
-                            <Box mt={'24px'}>
-                                <Flex alignItems={'stretch'} gap={'16px'}>
-                                    <Box w={'50px'} h={'50px'} position={'relative'} rounded={'50%'} overflow={'hidden'}>
-                                        <Box w={'100%'} h={'100%'} objectFit={'cover'} objectPosition={'center center'} backgroundColor={theme.colors.d_black}></Box>
-                                    </Box>
-                                    <Flex direction={'column'} gap={'8px'} lineHeight={'1'}>
-                                        <Text as={'p'} fontSize={'18px'} fontWeight={600}>John Doe</Text>
-                                        <Text as={'p'} fontSize={'12px'} fontWeight={400} opacity={0.5}>Subtitle</Text>
-                                    </Flex>
+                    {project?.feedback && 
+                        <Flex flexBasis={{ base: 'auto', xlg:'50%'}} justifyContent={'center'} alignItems={'center'}>
+                            <Box w={{ base: '100%', xmd: '75%'}} backgroundColor={'#F5F5F5'} padding={{ base: '20px', sm: '32px 32px 18px 32px'}}>
+                                <Flex justify={'space-between'} align={'center'} color={theme.colors.d_black}>
+                                    <ImQuotesLeft fontSize={'40px'} />
+                                    <Text as={'p'} fontSize={'24px'} fontWeight={700} textTransform={'uppercase'} whiteSpace={'nowrap'}>
+                                        {t('project_feedback')}
+                                    </Text>
                                 </Flex>
+                                <Text mt={'24px'} as={'p'} fontSize={{ base: '12px', xmini: '16px' }} lineHeight={'1.75'} fontStyle={'italic'}>{project?.feedback}</Text>
+                                <Box mt={'24px'}>
+                                    <Flex alignItems={'stretch'} gap={'16px'}>
+                                        <Box w={'50px'} h={'50px'} position={'relative'} rounded={'50%'} overflow={'hidden'}>
+                                            <Box w={'100%'} h={'100%'} objectFit={'cover'} objectPosition={'center center'} backgroundColor={theme.colors.d_black}></Box>
+                                        </Box>
+                                        <Flex direction={'column'} gap={'8px'} lineHeight={'1'}>
+                                            {project?.feedback_author && <Text as={'p'} fontSize={'18px'} fontWeight={600}>{project?.feedback_author}</Text>}
+                                            {project?.feedback_job && <Text as={'p'} fontSize={'12px'} fontWeight={400} opacity={0.5}>{project?.feedback_job}</Text>}
+                                        </Flex>
+                                    </Flex>
+                                </Box>
                             </Box>
-                        </Box>
-                    </Flex>
+                        </Flex>}
                 </Flex>
 
                 <Flex

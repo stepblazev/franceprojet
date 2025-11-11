@@ -234,7 +234,8 @@
     "phoneNumberIincorrect": "Le numéro de téléphone est incorrect ou le champ est vide",
     "passwordShort": "Le mot de passe est court ou le champ est vide",
     "fieldMatch": "Le champ ne correspond pas au champ de mot de passe",
-    "fieldnotBe": "Le champ ne doit pas être vide"
+    "fieldnotBe": "Le champ ne doit pas être vide",
+    "project_feedback": "Feedback"
 
 
     

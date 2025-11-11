@@ -8,7 +8,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 /** @mixin Project */
 class ProjectResource extends JsonResource
-{
+{    
     public function toArray($request)
     {
         return [
@@ -20,6 +20,9 @@ class ProjectResource extends JsonResource
             'text' => $this->text,
             'block_left' => $this->block_left,
             'block_right' => $this->block_right,
+            'feedback' => $this->feedback,
+            'feedback_author' => $this->feedback_author,
+            'feedback_job' => $this->feedback_job,
             'projects' => ProjectListResource::collection(
                 Project::query()
                     ->where('slug', '!=', $this->slug)

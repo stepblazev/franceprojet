@@ -105,6 +105,42 @@
                                                         </div>
 
 
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Feedback Text
+                                                                    {{ item.value.toUpperCase() }}</label>
+                                                                <textarea
+                                                                    class="form-control"
+                                                                    :name="'feedback[' + item.value +']'"
+                                                                    :value="this.content.translations[item.id].feedback"
+                                                                    rows="5"
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-xl-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Feedback Author
+                                                                    {{ item.value.toUpperCase() }}</label>
+                                                                <input type="text"
+                                                                    class="form-control"
+                                                                    :name="'feedback_author[' + item.value +']'"
+                                                                    :value="this.content.translations[item.id].feedback_author"
+                                                                    placeholder="Enter the feedback author's name"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-xl-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Feedback Job
+                                                                    {{ item.value.toUpperCase() }}</label>
+                                                                <input type="text"
+                                                                   class="form-control"
+                                                                   :name="'feedback_job[' + item.value +']'"
+                                                                   :value="this.content.translations[item.id].feedback_job"
+                                                                   placeholder="Enter the feedback author's job"/>
+                                                            </div>
+                                                        </div>
+
+
                                                 </div>
                                             </div>
                                         </div>
@@ -217,6 +253,9 @@ export default {
                     text: null,
                     block_right: null,
                     block_left: null,
+                    feedback: null,
+                    feedback_author: null,
+                    feedback_job: null,
                 }
                 this.saveContents[res.data.result.language[i].value] = null;
             }
@@ -243,6 +282,9 @@ export default {
                     this.content.translations[lang].text = data.translations[i].text;
                     this.content.translations[lang].block_right = data.translations[i].block_right;
                     this.content.translations[lang].block_left = data.translations[i].block_left;
+                    this.content.translations[lang].feedback = data.translations[i].feedback;
+                    this.content.translations[lang].feedback_author = data.translations[i].feedback_author;
+                    this.content.translations[lang].feedback_job = data.translations[i].feedback_job;
 
                     this.saveContents[langName] = data.translations[i].text;
                 }

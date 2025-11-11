@@ -29,6 +29,9 @@ class Project extends LocaleModel
         'title',
         'block_left',
         'block_right',
+        'feedback',
+        'feedback_author',
+        'feedback_job',
     ];
 
     public function file(): HasOne
