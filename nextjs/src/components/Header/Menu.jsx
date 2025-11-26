@@ -1,18 +1,15 @@
 import { Flex, Text } from '@chakra-ui/react';
-// import { headerNavMain } from '@/utils';
 import { useTranslation } from 'next-i18next';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const Menu = () => {
     const router = useRouter();
     const { t } = useTranslation('common');
 
     return (
-    
-    
-        <Flex justifyContent='space-between' alignItems='center' gap={{ base: '10px', md: '20px', lg: '30px', xdesk: '40px' } } >
-        <Link href='/#discover'   >
+        <Flex justifyContent='space-between' alignItems='center' gap={{ base: '10px', md: '20px', lg: '30px', xdesk: '40px' }} >
+            <Link href='/#discover'   >
                 <Flex
                     alignItems={'center'}
                     cursor={'pointer'}
@@ -91,11 +88,7 @@ const Menu = () => {
                     </Text>
                 </Flex>
             </Link>
-           
         </Flex>
-   
-        
-       
     );
 };
 export default Menu;

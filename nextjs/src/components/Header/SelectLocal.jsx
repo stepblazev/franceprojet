@@ -1,24 +1,19 @@
 
 import { useRouter } from 'next/router';
-import { withTranslation, useTranslation } from 'next-i18next'; // Импорт withTranslation или useTranslation
-
-
-
+import { withTranslation, useTranslation } from 'next-i18next';
 
 import React, { useEffect, useState } from 'react';
 import { Select, chakraComponents } from "chakra-react-select";
 import { Box, Icon } from '@chakra-ui/react';
-// import { countries_menu } from '@/utils';
 
 import English from '@/assets/En.svg';
 import France from '@/assets/Fr.svg';
 import Russian from '@/assets/Ru.svg';
-// import useLocalization from '../hooks/useLocalization';
-// import { useRouter } from 'next/router';
+
 const SelectLocal = ({ isBurgerMenuOpen = false }) => {
     const [selectedLanguage, setSelectedLanguage] = useState(null);
     const router = useRouter();
-    const { t, i18n } = useTranslation('common'); // Использование useTranslation здесь
+    const { t, i18n } = useTranslation('common');
 
     useEffect(() => {
         const selectedLocale = router.locale;
@@ -62,15 +57,7 @@ const SelectLocal = ({ isBurgerMenuOpen = false }) => {
 
                 components={{
                     ...customComponents,
-                    //     DropdownIndicator: ({ ...props }) => (
-                    //     <Box
-                    //       as={Down}
-                    //       onClick={handleMenuOpen}
-                    //       {...props}
-                    //     />
-                    //   ),
                 }}
-                // selectedOptionStyle="selectedLanguage.icon"
                 chakraStyles={{
                     dropdownIndicator: () => ({
                         bg: "transparent",
@@ -91,16 +78,13 @@ const SelectLocal = ({ isBurgerMenuOpen = false }) => {
                         bg: isBurgerMenuOpen ? "inherit" :"white",
                         color: "#454545",
                     }),
-
                     menuList: () => ({
                         bg: isBurgerMenuOpen ? "inherit" :"white",
                         color: "#fff",
                         border: isBurgerMenuOpen ? "none" : "2px solid #2E3083",
                         borderRadius: "5px",
                         py: "10px",
-
                     }),
-
                     option: () => ({
                         color: "#454545",
                         padding: "5px 10px",
@@ -116,8 +100,6 @@ const SelectLocal = ({ isBurgerMenuOpen = false }) => {
                     control: () => ({
                         border: "none",
                         cursor:"pointer"
-                        // width: "30px",
-                        // marginLeft: "7px",
                     }),
                 }}
             />
@@ -125,4 +107,4 @@ const SelectLocal = ({ isBurgerMenuOpen = false }) => {
     );
 };
 
-export default withTranslation('common')(SelectLocal); // Обертывание компонента в withTranslation
+export default withTranslation('common')(SelectLocal);

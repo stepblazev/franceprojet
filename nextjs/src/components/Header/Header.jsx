@@ -27,7 +27,6 @@ const Header = () => {
         }
         else if (router.pathname === '/professional') {
             router.push('/')
-
         }
     }
     
